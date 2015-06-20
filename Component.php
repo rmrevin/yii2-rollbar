@@ -17,6 +17,10 @@ class Component extends \yii\base\Object
     public $enabled = true;
     public $useLogger = true;
 
+    public $setExceptionHandler = true;
+    public $setErrorHandler = true;
+    public $reportFatalErrors = true;
+
     public $accessToken;
     public $agentLogLocation = '@app/runtime/rollbar';
     public $baseApiUrl = 'https://api.rollbar.com/api/1/';
@@ -41,6 +45,9 @@ class Component extends \yii\base\Object
     public $useErrorReporting = false;
     public $proxy;
 
+    const HANDLER_BLOCKING = 'blocking';
+    const HANDLER_AGENT = 'agent';
+
     public function init()
     {
         $this->enabled = $this->enabled !== false;
@@ -55,9 +62,14 @@ class Component extends \yii\base\Object
                 $logger = new Logger();
             }
 
+            $agentLogLocation = \Yii::getAlias($this->agentLogLocation);
+            if (!empty($agentLogLocation)) {
+                \yii\helpers\FileHelper::createDirectory($agentLogLocation);
+            }
+
             $config = [
                 'access_token' => $this->accessToken,
-                'agent_log_location' => $this->agentLogLocation,
+                'agent_log_location' => $agentLogLocation,
                 'base_api_url' => $this->baseApiUrl,
                 'batch_size' => $this->batchSize,
                 'batched' => $this->batched,
@@ -81,7 +93,12 @@ class Component extends \yii\base\Object
                 'proxy' => $this->proxy,
             ];
 
-            \Rollbar::init($config, false, false);
+            \Rollbar::init(
+                $config,
+                $this->setExceptionHandler,
+                $this->setErrorHandler,
+                $this->reportFatalErrors
+            );
         }
 
         parent::init();
