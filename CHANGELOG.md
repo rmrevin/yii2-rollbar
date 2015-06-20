@@ -1,3 +1,7 @@
+2015-06-20 - 1.1.3
+------------------
+* Enable tracking 404 error.
+
 2015-06-20 - 1.1.2
 ------------------
 * Moooore, mmmoooorrreeee oooptions!!!

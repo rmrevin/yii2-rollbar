@@ -62,7 +62,7 @@ trait ErrorHandlerTrait
      */
     public function handleException($exception)
     {
-        if ($this->getRollbar()->enabled && !($exception instanceof \yii\web\HttpException && $exception->statusCode == 404)) {
+        if ($this->getRollbar()->enabled) {
             \Rollbar::report_exception($exception);
         }
 
