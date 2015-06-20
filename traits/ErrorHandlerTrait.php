@@ -14,7 +14,8 @@ namespace rmrevin\yii\rollbar\traits;
 trait ErrorHandlerTrait
 {
 
-    public $rollbarComponent = 'rollbar';
+    /** @var string|\rmrevin\yii\rollbar\Component */
+    public $rollbar = 'rollbar';
 
     /**
      * @return null|\rmrevin\yii\rollbar\Component
@@ -22,9 +23,9 @@ trait ErrorHandlerTrait
      */
     protected function getRollbar()
     {
-        return is_string($this->rollbarComponent)
-            ? \Yii::$app->get($this->rollbarComponent)
-            : $this->rollbarComponent;
+        return is_string($this->rollbar)
+            ? \Yii::$app->get($this->rollbar)
+            : $this->rollbar;
     }
 
     /**

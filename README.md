@@ -29,6 +29,7 @@ return [
             'class' => 'rmrevin\yii\rollbar\Component',
             'accessToken' => 'YOU ACCESS TOKEN',
             'environment' => 'production',
+            // ... more options see in code
         ],
     ],
     // ...

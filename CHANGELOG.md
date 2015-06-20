@@ -1,3 +1,7 @@
+2015-06-20 - 1.1.2
+------------------
+* Moooore, mmmoooorrreeee oooptions!!!
+
 2015-06-20 - 1.1.1
 ------------------
 * Add enabled check in handlers.
