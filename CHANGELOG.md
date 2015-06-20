@@ -1,18 +1,9 @@
-2015-06-20 - 1.1.4
-------------------
-* Refactoring.
-
-2015-06-20 - 1.1.3
-------------------
-* Enable tracking 404 error.
-
-2015-06-20 - 1.1.2
-------------------
-* Moooore, mmmoooorrreeee oooptions!!!
-
 2015-06-20 - 1.1.1
 ------------------
 * Add enabled check in handlers.
+* Moooore, mmmoooorrreeee oooptions!!!
+* Enable tracking 404 error.
+* Refactoring.
 
 2015-06-20 - 1.1.0
 ------------------

@@ -17,8 +17,8 @@ class Component extends \yii\base\Object
     public $enabled = true;
     public $useLogger = true;
 
-    public $setExceptionHandler = true;
-    public $setErrorHandler = true;
+    public $setExceptionHandler = false;
+    public $setErrorHandler = false;
     public $reportFatalErrors = true;
 
     public $accessToken;
