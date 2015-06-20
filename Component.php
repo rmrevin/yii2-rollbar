@@ -14,6 +14,9 @@ namespace rmrevin\yii\rollbar;
 class Component extends \yii\base\Object
 {
 
+    public $enabled = true;
+    public $useLogger = true;
+
     public $baseApiUrl;
     public $accessToken;
     public $environment;
@@ -30,36 +33,43 @@ class Component extends \yii\base\Object
 
     public function init()
     {
-        if (empty($this->accessToken)) {
-            throw new \yii\base\InvalidConfigException(sprintf('`rollbar\Component::%s` must be specified.', 'accessToken'));
+        if ($this->enabled === true) {
+            if (empty($this->accessToken)) {
+                throw new \yii\base\InvalidConfigException(sprintf('`rollbar\Component::%s` must be specified.', 'accessToken'));
+            }
+
+            $logger = $this->logger;
+            if (!($logger instanceof \iRollbarLogger) && $this->useLogger === true) {
+                $logger = new Logger();
+            }
+
+            $config = [
+                'access_token' => $this->accessToken,
+                'environment' => $this->environment,
+                'branch' => $this->branch,
+                'batched' => $this->batched,
+                'batch_size' => $this->batchSize,
+                'handler' => $this->handler,
+                'timeout' => $this->timeout,
+                'logger' => $logger,
+                'base_api_url' => $this->baseApiUrl,
+                'root' => \Yii::getAlias($this->root),
+            ];
+
+            if (!empty($this->person)) {
+                $config['person'] = $this->person;
+            }
+
+            if (!empty($this->scrub_fields)) {
+                $config['scrub_fields'] = $this->scrub_fields;
+            }
+
+            if (is_callable($this->person_fn)) {
+                $config['person_fn'] = $this->person_fn;
+            }
+
+            \Rollbar::init($config, false, false);
         }
-
-        $config = [
-            'access_token' => $this->accessToken,
-            'environment' => $this->environment,
-            'branch' => $this->branch,
-            'batched' => $this->batched,
-            'batch_size' => $this->batchSize,
-            'handler' => $this->handler,
-            'timeout' => $this->timeout,
-            'logger' => $this->logger,
-            'base_api_url' => $this->baseApiUrl,
-            'root' => \Yii::getAlias($this->root),
-        ];
-
-        if (!empty($this->person)) {
-            $config['person'] = $this->person;
-        }
-
-        if (!empty($this->scrub_fields)) {
-            $config['scrub_fields'] = $this->scrub_fields;
-        }
-
-        if (is_callable($this->person_fn)) {
-            $config['person_fn'] = $this->person_fn;
-        }
-
-        \Rollbar::init($config, false, false);
 
         parent::init();
     }
