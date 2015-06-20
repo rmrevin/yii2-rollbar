@@ -1,0 +1,41 @@
+{
+  "name": "rmrevin/yii2-rollbar",
+  "description": "Yii2 error handler rollbar",
+  "keywords": [
+    "yii",
+    "font",
+    "error",
+    "rollbar"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "support": {
+    "issues": "https://github.com/rmrevin/yii2-rollbar/issues",
+    "source": "https://github.com/rmrevin/yii2-rollbar"
+  },
+  "authors": [
+    {
+      "name": "Roman Revin",
+      "email": "xgismox@gmail.com",
+      "homepage": "http://rmrevin.ru/"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+
+    "yiisoft/yii2": "2.0.*",
+    "rollbar/rollbar": "0.13.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "rmrevin\\yii\\rollbar\\": ""
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
