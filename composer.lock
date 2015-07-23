@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4b5c24ab8fd60129580fb5eb49ed9b41",
+    "hash": "c4e84625029633fce4830a1878ad9cfb",
     "packages": [
         {
             "name": "bower-asset/jquery",
@@ -269,16 +269,16 @@
         },
         {
             "name": "rollbar/rollbar",
-            "version": "v0.13.0",
+            "version": "v0.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rollbar/rollbar-php.git",
-                "reference": "f392af0c62b03d8538ef76e5da93c562c01700e4"
+                "reference": "ff00d5cd676f1afeed73313f7d15572d2622214a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rollbar/rollbar-php/zipball/f392af0c62b03d8538ef76e5da93c562c01700e4",
-                "reference": "f392af0c62b03d8538ef76e5da93c562c01700e4",
+                "url": "https://api.github.com/repos/rollbar/rollbar-php/zipball/ff00d5cd676f1afeed73313f7d15572d2622214a",
+                "reference": "ff00d5cd676f1afeed73313f7d15572d2622214a",
                 "shasum": ""
             },
             "require": {
@@ -314,20 +314,20 @@
                 "logging",
                 "monitoring"
             ],
-            "time": "2015-06-16 22:10:25"
+            "time": "2015-06-23 00:24:54"
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "726867caee3f23aa7a6975c801e64b6021e14f86"
+                "reference": "ea8c13b9f5cd437bd7bf73cad8a3457a155f3727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/726867caee3f23aa7a6975c801e64b6021e14f86",
-                "reference": "726867caee3f23aa7a6975c801e64b6021e14f86",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ea8c13b9f5cd437bd7bf73cad8a3457a155f3727",
+                "reference": "ea8c13b9f5cd437bd7bf73cad8a3457a155f3727",
                 "shasum": ""
             },
             "require": {
@@ -402,7 +402,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-05-10 20:09:47"
+            "time": "2015-07-11 02:37:59"
         },
         {
             "name": "yiisoft/yii2-composer",
