@@ -1,3 +1,7 @@
+2015-07-23 - 1.2.0
+------------------
+* Update `Rollbar` extension to 0.14.0.
+
 2015-06-20 - 1.1.1
 ------------------
 * Add enabled check in handlers.
