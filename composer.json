@@ -25,7 +25,7 @@
     "php": ">=5.4.0",
 
     "yiisoft/yii2": "2.0.*",
-    "rollbar/rollbar": "0.14.*"
+    "rollbar/rollbar": "0.15.*"
   },
   "autoload": {
     "psr-4": {
