@@ -1,3 +1,7 @@
+2016-06-28 - 1.4.0
+------------------
+* Update `Rollbar` extension to `0.18.0`.
+
 2015-08-16 - 1.3.0
 ------------------
 * Update `Rollbar` extension to `0.15.0`.
