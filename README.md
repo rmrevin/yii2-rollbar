@@ -8,7 +8,7 @@ Yii 2 Rollbar error handler
 Installation
 ------------
 ```bash
-composer require "rmrevin/yii2-rollbar:1.1.*"
+composer require "rmrevin/yii2-rollbar:~1.5"
 ```
 
 Usage

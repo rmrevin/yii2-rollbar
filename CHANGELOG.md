@@ -1,3 +1,8 @@
+2017-07-10 - 1.5.0
+------------------
+* Update `Rollbar` extension to `0.18.2`.
+* Update packages.
+
 2016-06-28 - 1.4.0
 ------------------
 * Update `Rollbar` extension to `0.18.0`.
